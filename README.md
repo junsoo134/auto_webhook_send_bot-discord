@@ -1,2 +1,2 @@
-# auto_webhook_send_bot-discord
-웹훅전송 봇
+# 웹훅전송 봇
+- 소스는 극일부임. 풀소스는 봉순#1234 구매.
