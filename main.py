@@ -16,6 +16,7 @@ status = cycle(['=명령어', '{n}개의 서버'])
 
 @client.event
 async def on_ready():
+    os.mkdir('./DB')
     print(client.user)
     change_message.start()
 
