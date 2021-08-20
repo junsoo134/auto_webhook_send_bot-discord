@@ -142,7 +142,7 @@ async def on_message(message):
             embed.add_field(name='=테스트', value='설정된 임베드를 명령어 입력 채널에 전송합니다')
             embed.add_field(name='=전송', value='설정된 값에 맞춰 자동으로 웹훅메시지를 전송합니다', inline=False)
             embed.add_field(name='=정지', value='웹훅메시지 전송을 정지합니다', inline=False)
-            embed.set_footer(text='오픈소스 > https://github.com/BSGreatuser/auto_webhook_send_bot-discord (봉순#1234)')
+            embed.set_footer(text='오픈소스 >\nhttps://github.com/BSGreatuser/auto_webhook_send_bot-discord (봉순#1234)')
         await message.channel.send(f'{message.author.mention} 디엠을 확인해주세요')
         await message.author.send(embed=embed)
 
