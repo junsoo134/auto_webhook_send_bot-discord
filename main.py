@@ -93,7 +93,7 @@ async def on_message(message):
                     e.set_author(name=message.guild.name, url=invite, icon_url=icon)
                     e.add_field(name='디스코드 서버주소', value=invite)
                     e.set_thumbnail(url=thumb_url)
-                    e.set_footer(text=str(message.author), icon_url=str(message.author.avatar_url))
+                    e.set_footer(text='배너봇 오픈소스: 봉순#1234')
 
                     try:
                         await webhook.send(content=f'{content}ㅣ{invite}', username=name, embed=e, avatar_url=avatar)
