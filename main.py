@@ -7,17 +7,19 @@ from itertools import cycle
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
+print("© 2021. 봉순#1234. All rights reserved.\n무단배포 및 상업적 사용 금지.\n원작자 표시.")
+
 token = 'token'
 
 client = discord.Client()
 mkjson = OrderedDict()
 
-status = cycle(['=명령어', '{n}개의 서버'])
+status = cycle(['=명령어', '{n}개의 서버', '오픈소스 > 봉순#1234'])
 
 @client.event
 async def on_ready():
     os.mkdir('./DB')
-    print(client.user)
+    print(client.user + ' 접속됨')
     change_message.start()
 
 @client.event
@@ -94,7 +96,7 @@ async def on_message(message):
                     e.set_author(name=message.guild.name, url=invite, icon_url=icon)
                     e.add_field(name='디스코드 서버주소', value=invite)
                     e.set_thumbnail(url=thumb_url)
-                    e.set_footer(text='배너봇 오픈소스: 봉순#1234')
+                    e.set_footer(text='배너봇 오픈소스: 봉순#1234') #수정금지
 
                     try:
                         await webhook.send(content=f'{content}ㅣ{invite}', username=name, embed=e, avatar_url=avatar)
@@ -143,7 +145,7 @@ async def on_message(message):
             embed.add_field(name='=테스트', value='설정된 임베드를 명령어 입력 채널에 전송합니다')
             embed.add_field(name='=전송', value='설정된 값에 맞춰 자동으로 웹훅메시지를 전송합니다', inline=False)
             embed.add_field(name='=정지', value='웹훅메시지 전송을 정지합니다', inline=False)
-            embed.set_footer(text='오픈소스 >\nhttps://github.com/BSGreatuser/auto_webhook_send_bot-discord (봉순#1234)')
+            embed.set_footer(text='오픈소스 >\nhttps://github.com/BSGreatuser/auto_webhook_send_bot-discord (봉순#1234)') #수정금지
         await message.channel.send(f'{message.author.mention} 디엠을 확인해주세요')
         await message.author.send(embed=embed)
 
